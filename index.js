@@ -1,7 +1,14 @@
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-capitalize("egg");
-const tes = "abc";
-console.log(tes[1].toUpperCase());
-module.exports = { capitalize };
+
+function reverseString(string) {
+  let reversedString = "";
+  for (let i = string.length - 1; i >= 0; i--) {
+    reversedString += string.charAt(i);
+  }
+
+  return reversedString;
+}
+
+module.exports = { capitalize, reverseString };
