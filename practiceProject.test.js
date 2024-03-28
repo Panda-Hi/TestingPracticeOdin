@@ -1,4 +1,24 @@
-const { capitalize, reverseString, calculator } = require("./index");
+const {
+  capitalize,
+  reverseString,
+  calculator,
+  caesarCipher,
+} = require("./index");
+
+describe("caesarCipher function", () => {
+  it("encrypt with shift 2", () => {
+    const string = "i hate, jessica";
+    const shift = 2;
+    const expectedVal = "k jcvg, lguukec";
+    expect(caesarCipher(string, shift)).toBe(expectedVal);
+  });
+  it("encrypt with shift -2", () => {
+    const string = "abc de";
+    const shift = -2;
+    const expectedVal = "yza bc";
+    expect(caesarCipher(string, shift)).toBe(expectedVal);
+  });
+});
 
 describe("calculator function", () => {
   it("add a + b", () => {
