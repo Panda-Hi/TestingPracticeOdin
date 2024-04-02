@@ -3,8 +3,22 @@ const {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray,
 } = require("./index");
 
+describe("analyze array function", () => {
+  it("return object from analyzed array", () => {
+    const array = [2, 5, 10, 1, 3];
+    const object = analyzeArray(array);
+    const expectedObject = {
+      average: 4.2,
+      min: 1,
+      max: 10,
+      length: 5,
+    };
+    expect(object).toEqual(expectedObject);
+  });
+});
 describe("caesarCipher function", () => {
   it("encrypt with shift 2", () => {
     const string = "i hate, jessica";
